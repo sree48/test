@@ -4,63 +4,65 @@
 <meta charset="UTF-8">
 <title>Valentine</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;800&display=swap" rel="stylesheet">
 
 <style>
     body {
         margin: 0;
         height: 100vh;
         font-family: 'Nunito', sans-serif;
+
+        background: url("index_page.png") no-repeat center center/cover;
+
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         text-align: center;
-
-        background: url("index_page.png") no-repeat center center/cover;
-
         color: white;
-        text-shadow: 0 0 8px rgba(0,0,0,0.6);
+        text-shadow: 0 0 10px rgba(0,0,0,0.7);
+
         overflow: hidden;
     }
 
     h1 {
-        font-size: 58px;
+        font-size: 70px;
         margin-bottom: 10px;
-        font-weight: 700;
+        font-weight: 800;
     }
 
     h2 {
-        font-size: 38px;
-        margin-bottom: 40px;
+        font-size: 45px;
+        margin-bottom: 50px;
         font-weight: 400;
     }
 
     button {
-        padding: 20px 55px;
-        font-size: 26px;
-        border-radius: 50px;
+        padding: 25px 70px;
+        font-size: 32px;
+        border-radius: 55px;
         border: none;
         cursor: pointer;
-        margin: 15px;
+        margin: 20px;
         transition: 0.25s ease;
     }
 
     #yesBtn {
         background: #ff2f6d;
         color: white;
-        font-weight: 700;
-        box-shadow: 0 6px 25px rgba(255, 50, 120, 0.5);
+        font-weight: 800;
+        box-shadow: 0 6px 30px rgba(255, 50, 120, 0.6);
     }
     #yesBtn:hover {
-        transform: scale(1.15);
+        transform: scale(1.16);
     }
 
     #noBtn {
-        background: #ffffff;
-        color: #333;
+        background: black;
+        color: white;
         position: absolute;
-        font-weight: 600;
+        font-weight: 700;
     }
 </style>
 </head>
@@ -71,12 +73,12 @@
 <h2>Will you be my Valentine 💌</h2>
 
 <button id="yesBtn" onclick="location.href='yes.html'">YES 💗</button>
-<button id="noBtn" onmouseover="moveBtn()">NO 😭</button>
+<button id="noBtn" onmouseover="moveBtn()">NO 😏</button>
 
 <script>
 function moveBtn() {
     const btn = document.getElementById("noBtn");
-    const x = Math.random() * (window.innerWidth - 150);
+    const x = Math.random() * (window.innerWidth - 160);
     const y = Math.random() * (window.innerHeight - 100);
     btn.style.left = x + "px";
     btn.style.top = y + "px";
