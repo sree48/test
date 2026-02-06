@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>Good Decision</title>
+
 <style>
 body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
   text-align: center;
-  font-family: Arial;
-  background: #ffb6c1;
+  height: 100vh;
   overflow: hidden;
+  background: #ffb6c9;
 }
 
-/* Floating hearts */
+/* Hearts animation */
 .heart {
   position: absolute;
-  color: red;
   font-size: 30px;
+  color: red;
   animation: floatUp 4s linear infinite;
 }
 
@@ -24,18 +28,29 @@ body {
 }
 
 h1 {
-  margin-top: 150px;
+  margin-top: 40px;
   font-size: 40px;
+  color: #b3003c;
+  text-shadow: 0 0 10px white;
+}
+
+.gif {
+  width: 320px;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px white;
 }
 </style>
 </head>
 
 <body>
 
-<h1>Good decision ❤️</h1>
+<h1>Awww… Good decision ❤️</h1>
+
+<img src="YOUR_KISSING_GIF_URL" class="gif">
 
 <script>
-// Create hearts forever
+// Endless floating hearts
 setInterval(() => {
   const heart = document.createElement("div");
   heart.className = "heart";
