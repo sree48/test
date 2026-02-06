@@ -1,49 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>Valentine</title>
+
 <style>
 body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
   text-align: center;
-  font-family: Arial;
-  margin-top: 100px;
-  background: pink;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* Animated background GIF */
+  background: url("YOUR_BACKGROUND_GIF_URL") no-repeat center center/cover;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+h1 {
+  font-size: 50px;
+  text-shadow: 0 0 15px #ff7eb3;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 30px;
+  text-shadow: 0 0 15px #ffcce6;
+  margin-bottom: 40px;
 }
 
 button {
-  padding: 15px 30px;
-  font-size: 20px;
+  padding: 18px 40px;
+  font-size: 22px;
+  border-radius: 50px;
   border: none;
-  border-radius: 10px;
   cursor: pointer;
+  margin: 15px;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
 }
 
 #yesBtn {
-  background: red;
+  background: #ff3e6c;
   color: white;
 }
 
+#yesBtn:hover {
+  transform: scale(1.15);
+  background: #ff174a;
+}
+
 #noBtn {
-  background: gray;
+  background: #444;
   color: white;
   position: absolute;
+}
+
+#noBtn:hover {
+  transform: scale(0.9);
 }
 </style>
 </head>
 
 <body>
 
-<h1>Hi ABC ❤️</h1>
-<h2>Will you be my Valentine?</h2>
+<h1>Hi Madhu 🫶🏻</h1>
+<h2>Will you be my Valentine 💌</h2>
 
-<button id="yesBtn" onclick="location.href='yes.html'">YES</button>
-<button id="noBtn" onmouseover="moveButton()">NO</button>
+<button id="yesBtn" onclick="location.href='yes.html'">YES 💗</button>
+<button id="noBtn" onmouseover="moveBtn()">NO 😭</button>
 
 <script>
-function moveButton() {
+function moveBtn() {
   const btn = document.getElementById("noBtn");
-  const x = Math.random() * (window.innerWidth - 100);
-  const y = Math.random() * (window.innerHeight - 100);
+  const x = Math.random() * (window.innerWidth - 150);
+  const y = Math.random() * (window.innerHeight - 80);
   btn.style.left = x + "px";
   btn.style.top = y + "px";
 }
