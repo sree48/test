@@ -4,63 +4,61 @@
 <meta charset="UTF-8">
 <title>Good Decision</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+
 <style>
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  text-align: center;
-  height: 100vh;
-  overflow: hidden;
-  background: #ffb6c9;
-}
+    body {
+        margin: 0;
+        height: 100vh;
+        font-family: 'Nunito', sans-serif;
 
-/* Hearts animation */
-.heart {
-  position: absolute;
-  font-size: 30px;
-  color: red;
-  animation: floatUp 4s linear infinite;
-}
+        background: url("yes_page.png") no-repeat center center/cover;
 
-@keyframes floatUp {
-  from { transform: translateY(100vh); opacity: 1; }
-  to { transform: translateY(-10vh); opacity: 0; }
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
 
-h1 {
-  margin-top: 40px;
-  font-size: 40px;
-  color: #b3003c;
-  text-shadow: 0 0 10px white;
-}
+    h1 {
+        font-size: 60px;
+        color: white;
+        font-weight: 700;
+        text-shadow: 0 0 12px rgba(0,0,0,0.8);
+    }
 
-.gif {
-  width: 320px;
-  margin-top: 20px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px white;
-}
+    /* Heart animation */
+    .heart {
+        position: absolute;
+        font-size: 30px;
+        color: #ff1a75;
+        animation: floatUp 4s linear infinite;
+        pointer-events: none;
+    }
+
+    @keyframes floatUp {
+        from { transform: translateY(60vh); opacity: 1; }
+        to   { transform: translateY(-20vh); opacity: 0; }
+    }
 </style>
 </head>
 
 <body>
 
-<h1>Awww… Good decision ❤️</h1>
-
-<img src="YOUR_KISSING_GIF_URL" class="gif">
+<h1>Awww… Good Decision ❤️</h1>
 
 <script>
-// Endless floating hearts
 setInterval(() => {
-  const heart = document.createElement("div");
-  heart.className = "heart";
-  heart.innerHTML = "❤️";
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.fontSize = (20 + Math.random()*40) + "px";
-  document.body.appendChild(heart);
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
 
-  setTimeout(() => heart.remove(), 4000);
-}, 300);
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (30 + Math.random() * 40) + "px";
+
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 4000);
+}, 250);
 </script>
 
 </body>
