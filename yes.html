@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Good Decision</title>
+<style>
+body {
+  text-align: center;
+  font-family: Arial;
+  background: #ffb6c1;
+  overflow: hidden;
+}
+
+/* Floating hearts */
+.heart {
+  position: absolute;
+  color: red;
+  font-size: 30px;
+  animation: floatUp 4s linear infinite;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(100vh); opacity: 1; }
+  to { transform: translateY(-10vh); opacity: 0; }
+}
+
+h1 {
+  margin-top: 150px;
+  font-size: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Good decision ❤️</h1>
+
+<script>
+// Create hearts forever
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (20 + Math.random()*40) + "px";
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 4000);
+}, 300);
+</script>
+
+</body>
+</html>
